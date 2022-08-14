@@ -34,8 +34,7 @@ export const registerFunctions = () => {
             // Signed in
             const user = userCredential.user;
             console.log(userCredential)
-            sendEmail().then((data)=>{
-              console.log(data)
+            sendEmail().then(()=>{
               alert("se envio correo")
             }).catch((error) => {
               console.log(error)
