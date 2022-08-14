@@ -1,26 +1,29 @@
-import {createUser, sendEmail} from '../lib/index.js'
-
+import {createUser} from '../lib/index.js'
 export default () => {
     const viewRegister = `
-    <h2>Crear nueva cuenta</h2>
-    <label>Nombre</label>
-    <input type="text" id="name">
-    <label>Email</label>
-    <input type="text" id="email">
-    <label>Contraseña</label>
-    <input type="text" id="password">
+    <section class="contenido_container2" id="container2">
+    <div class = "form">
+    <h2 class =" titulo-register">Crear cuenta</h2>
+    <input type="text" id="name" class ="form-input" placeholder ="Nombre de Usuario">
+    <input type="text" id="email" class ="form-input" placeholder ="Correo Electrónico">
+    <input type="text" id="password" class ="form-input" placeholder ="Contraseña">
     <button class="button-register" id="register">
-        Registrarse
+        Registrate
     </button>
-    <p id="message-error"></p>`
+    <button class="button-google" id="optiongoogle">
+        Iniciar Sesión con Google
+    </button>
+    </div>
+    </section>
+    `
 
     const divElement = document.createElement('div')
+  
     divElement.innerHTML = viewRegister;
+   
 
     return divElement;
 }
-
-
 
 export const registerFunctions = () => {
     const btnRegister = document.getElementById('register')
@@ -28,19 +31,12 @@ export const registerFunctions = () => {
         console.log('hola registrandose')
         const user = document.getElementById('email').value
         const password = document.getElementById('password').value
-        const msgError = document.getElementById('message-error')
-        if (user !== '' && password !== ''){
-          createUser(user, password).then((userCredential) => {
+        console.log(user, password)
+        createUser(user, password)
+          .then((userCredential) => {
             // Signed in
             const user = userCredential.user;
-            console.log(userCredential)
-            sendEmail().then((data)=>{
-              console.log(data)
-              alert("se envio correo")
-            }).catch((error) => {
-              console.log(error)
-            })
-            // window.location.hash ="#/Post"
+            window.location.hash ="#/Post"
             // ...
           })
           .catch((error) => {
@@ -49,10 +45,8 @@ export const registerFunctions = () => {
             console.log(error.code, error.message)
             // ..
           });
-
-        }else{
-          msgError.innerHTML ="ingresa email o password faltante"
-        }  
+        
     })
+
 }
 
