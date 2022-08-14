@@ -42,7 +42,7 @@ export const signInPopup = () => {
 }
 
 export const sendEmail = () =>{
-    return sendEmailVerification(auth.currentUser)
+    return sendEmailVerification(auth.currentUser);
 }
 
 export { GoogleAuthProvider }
