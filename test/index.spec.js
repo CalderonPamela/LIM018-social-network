@@ -23,7 +23,7 @@ describe('testeando accesFunctions', () => {
   it('debería ser una función', () => {
     expect(typeof accesFunctions).toBe('function');
   });
-  it('click del boton access', () =>{
+  it('click del boton access campos vacios', () =>{
     const container = document.createElement('section')
     document.body.appendChild(container)
     container.appendChild(access())
@@ -32,14 +32,28 @@ describe('testeando accesFunctions', () => {
     accessButton.click()
     const merror = document.getElementById('message-error');
     expect(merror.innerHTML).toBe('ingresa email o password faltante');
+    // const user = document.getElementById('email');
+    // user.value = "belen123456@gmail.com"
+    // const pass = document.getElementById('password');
+    // pass.value = "123456"
+    // accessButton.click()
+    // console.log(window.location.hash)
+    // expect(window.location.hash).toBe("#/Post");
+  })
+  it('click del boton access campos completados', () =>{
+    const container = document.createElement('section')
+    document.body.appendChild(container)
+    container.appendChild(access())
+    accesFunctions()
+    const accessButton = document.getElementById('acces')
     const user = document.getElementById('email');
     user.value = "belen123456@gmail.com"
     const pass = document.getElementById('password');
     pass.value = "123456"
     accessButton.click()
+    console.log("aaaaaaaaaaaaaa")
     console.log(window.location.hash)
     expect(window.location.hash).toBe("#/Post");
-    console.log(window.location.hash)
   })
 });
 
