@@ -37,7 +37,6 @@ export const accesFunctions = () => {
         // Signed in
         const user = userCredential.user;
         console.log(userCredential)
-        // window.location.hash = "#/Post"
         if(user.emailVerified){
           console.log('verificado')
           window.location.hash = "#/Post"
