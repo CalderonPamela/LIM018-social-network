@@ -1,5 +1,5 @@
 // importamos la funcion que vamos a testear
-import access, { accesFunctions} from "../src/view/Acces.js";
+import access, { accesFunctions } from "../src/view/Acces.js";
 jest.mock('../src/lib//index.js')
 
 describe('testeando access', () => {
@@ -23,7 +23,7 @@ describe('testeando accesFunctions', () => {
   it('debería ser una función', () => {
     expect(typeof accesFunctions).toBe('function');
   });
-  it('click del boton access', () =>{
+  it('click del boton access campos completados', (done) => {
     const container = document.createElement('section')
     document.body.appendChild(container)
     container.appendChild(access())
@@ -37,9 +37,11 @@ describe('testeando accesFunctions', () => {
     const pass = document.getElementById('password');
     pass.value = "123456"
     accessButton.click()
-    console.log(window.location.hash)
-    expect(window.location.hash).toBe("#/Post");
-    console.log(window.location.hash)
+    setTimeout(() => {
+      console.log(window.location.hash)
+      expect(window.location.hash).toBe("#/Post");
+      done()
+    },0)
   })
 });
 
