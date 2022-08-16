@@ -5,4 +5,3 @@ export const signIn = () => Promise.resolve({
     },
 });
 
-// export const signInWithEmailAndPassword = () =>

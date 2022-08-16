@@ -1,4 +1,4 @@
-import {createUser} from '../lib/index.js'
+import {createUser,sendEmail} from '../lib/index.js'
 export default () => {
     const viewRegister = `
     <section class="contenido_container2" id="container2">
@@ -36,7 +36,13 @@ export const registerFunctions = () => {
           .then((userCredential) => {
             // Signed in
             const user = userCredential.user;
-            window.location.hash ="#/Post"
+            console.log(userCredential)
+            sendEmail().then(()=>{
+              alert("se envio correo")
+            }).catch((error) => {
+              console.log(error)
+            })
+            // window.location.hash ="#/Post"
             // ...
           })
           .catch((error) => {
