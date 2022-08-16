@@ -5,8 +5,8 @@ export default () => {
    <section class="contenido_container2" id="container2">
    <div class = "acess">
    <h2 class =" titulo-acsess">Bienvenido</h2>
-   <input type="text" id="email" class ="form-input" placeholder ="Correo Electrónico">
-   <input type="text" id="password" class ="form-input"placeholder ="Constraseña">
+   <input type="text" id="email" class ="form-input" placeholder ="Correo Electrónico" value="pvaphwyuskvurpcseb@bvhrs.com">
+   <input type="text" id="password" class ="form-input"placeholder ="Contraseña">
    <button class="button-acces" id="acces">
        Iniciar sesión
    </button>

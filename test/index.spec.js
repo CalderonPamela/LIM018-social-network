@@ -23,7 +23,7 @@ describe('testeando accesFunctions', () => {
   it('debería ser una función', () => {
     expect(typeof accesFunctions).toBe('function');
   });
-  it('click del boton access campos completados', (done) => {
+  it('click del boton access campos vacios', () =>{
     const container = document.createElement('section')
     document.body.appendChild(container)
     container.appendChild(access())
@@ -32,6 +32,13 @@ describe('testeando accesFunctions', () => {
     accessButton.click()
     const merror = document.getElementById('message-error');
     expect(merror.innerHTML).toBe('ingresa email o password faltante');
+  })
+  it('click del boton access campos completados', (done) =>{
+    const container = document.createElement('section')
+    document.body.appendChild(container)
+    container.appendChild(access())
+    accesFunctions()
+    const accessButton = document.getElementById('acces')
     const user = document.getElementById('email');
     user.value = "belen123456@gmail.com"
     const pass = document.getElementById('password');
@@ -41,7 +48,7 @@ describe('testeando accesFunctions', () => {
       console.log(window.location.hash)
       expect(window.location.hash).toBe("#/Post");
       done()
-    },0)
+    }, 100)
   })
 });
 
