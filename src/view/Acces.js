@@ -6,7 +6,7 @@ export default () => {
    <div class = "acess">
    <h2 class =" titulo-acsess">Bienvenido</h2>
    <input type="text" id="email" class ="form-input" placeholder ="Correo Electrónico" value="pvaphwyuskvurpcseb@bvhrs.com">
-   <input type="text" id="password" class ="form-input"placeholder ="Contraseña">
+   <input type="password" id="password" class ="form-input"placeholder ="Contraseña">
    <button class="button-acces" id="acces">
        Iniciar sesión
    </button>
@@ -35,24 +35,25 @@ export const accesFunctions = () => {
     if (user !== '' && password !== ''){
       signIn(user, password).then((userCredential) => {
         // Signed in
-        const user = userCredential.user;
         console.log(userCredential)
-        // window.location.hash = "#/Post"
+        const user = userCredential.user;
         if(user.emailVerified){
           console.log('verificado')
           window.location.hash = "#/Post"
         }else{
-          console.log('no se verificó')
+          console.log(user.email)
+          alert("El correo eléctronico no ha sido verificado. Revisar bandeja de entrada de " 
+          + user.email)
         }
       })
       .catch((error) => {
-        console.log("error")
+        console.log(error)
         const errorCode = error.code;
         const errorMessage = error.message;
+        alert(errorMessage)
         // ..
       });
     }else{
-      console.log('ingresa email o password faltante')
       msgError.innerHTML ="ingresa email o password faltante"
     }
   })
