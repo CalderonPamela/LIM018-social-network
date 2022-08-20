@@ -13,9 +13,11 @@ describe('testeando access', () => {
     const email = document.getElementById('email')
     const password = document.getElementById('password')
     const accessButton = document.getElementById('acces')
+    const googleButton = document.getElementById('optiongoogle')
     expect(email instanceof HTMLElement).toBeTruthy();
     expect(password instanceof HTMLElement).toBe(true);
     expect(accessButton instanceof HTMLElement).toBeTruthy();
+    expect(googleButton instanceof HTMLElement).toBe(true)
   });
 });
 
