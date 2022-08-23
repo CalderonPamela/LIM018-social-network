@@ -13,7 +13,7 @@ export default () => {
   <i class="ph-envelope"></i>
    </div>
    <div class = "input-box">
-  <input type="text" id="password" class ="form-input"placeholder ="Contraseña">
+  <input type="password" id="password" class ="form-input"placeholder ="Contraseña">
   <i class="ph-eye-closed"></i>
    </div>
   <button class="button-access" id="acces">
@@ -47,22 +47,23 @@ export const accesFunctions = () => {
       signIn(user, password).then((userCredential) => {
         // Signed in
         const user = userCredential.user;
-        console.log(userCredential)
         if(user.emailVerified){
           console.log('verificado')
           window.location.hash = "#/Post"
         }else{
-          console.log('no se verificó')
+          console.log(user.email)
+          alert("El correo eléctronico no ha sido verificado. Revisar bandeja de entrada de " 
+          + user.email)
         }
       })
       .catch((error) => {
-        console.log("error")
+        console.log(error)
         const errorCode = error.code;
         const errorMessage = error.message;
+        alert(errorMessage)
         // ..
       });
     }else{
-      console.log('ingresa email o password faltante')
       msgError.innerHTML ="ingresa email o password faltante"
     }
   })

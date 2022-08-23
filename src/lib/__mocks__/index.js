@@ -5,3 +5,8 @@ export const signIn = () => Promise.resolve({
     },
 });
 
+export const createUser = () => Promise.resolve({
+});
+
+export const sendEmail = () => Promise.resolve({
+});

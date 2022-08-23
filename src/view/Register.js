@@ -17,7 +17,7 @@ export default () => {
   <i class="ph-envelope"></i>
   </div>
   <div class = "input-box">
-  <input type="text" id="password" class ="form-input" placeholder ="Contraseña">
+  <input type="password" id="password" class ="form-input" placeholder ="Contraseña">
   <i class="ph-eye-closed"></i>
   </div>
   <button class="button-register" id="register">
@@ -41,63 +41,32 @@ export default () => {
 }
 
 export const registerFunctions = () => {
-  const btnRegister = document.getElementById('register')
-  btnRegister.addEventListener('click', (e) => {
-    console.log('hola registrandose')
-    const user = document.getElementById('email').value
-    const password = document.getElementById('password').value
-    const msgError = document.getElementById('message-error')
-    if (user !== '' && password !== '') {
-      createUser(user, password).then((userCredential) => {
-        // Signed in
-        const user = userCredential.user;
-        console.log(userCredential)
-        sendEmail().then(() => {
-          alert("se envio correo")
-        }).catch((error) => {
-          console.log(error)
-        })
-        // window.location.hash ="#/Post"
-        // ...
-      })
-        .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
-          console.log(error.code, error.message)
-          // ..
-        });
     const btnRegister = document.getElementById('register')
     btnRegister.addEventListener('click', (e) => {
-        console.log('hola registrandose')
         const user = document.getElementById('email').value
         const password = document.getElementById('password').value
-        console.log(user, password)
-        createUser(user, password)
-          .then((userCredential) => {
+        const errorMessage = document.getElementById('message-error')
+        if(user != '' && password != ''){
+          createUser(user, password).then((userCredential) => {
             // Signed in
-            const user = userCredential.user;
-            console.log(userCredential)
             sendEmail().then(()=>{
               alert("se envio correo")
             }).catch((error) => {
               console.log(error)
+              alert(error)
             })
-            // window.location.hash ="#/Post"
-            // ...
           })
           .catch((error) => {
+            console.log(error)
             const errorCode = error.code;
             const errorMessage = error.message;
-            console.log(error.code, error.message)
+            alert(errorMessage)
             // ..
           });
-        
-    })
-
-    } else {
-      msgError.innerHTML = "ingresa email o password faltante"
-    }
-  })
+        }else{
+          errorMessage.innerHTML = 'ingresa email o password faltante'
+        }  
+    })   
 }
 
 
