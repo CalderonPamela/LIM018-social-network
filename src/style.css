@@ -289,5 +289,34 @@
         align-items: center;
         color: black
     }
+
+   
+    
+    .text-post{
+        width: 60vw;
+        height: 20vh;
+        background-color: white;
+        display: flex;
+        flex-direction: column; 
+        border-radius: 0px 0px 25px 25px; 
+    }
+    
+    .titulo-post{
+        width: 60vw;
+        height: 5vh;
+        background-color: black;
+        color: white;
+        display: flex;
+        flex-direction: column; 
+        text-align: center;
+    }
+    
+    .button-post{
+        width: 60vw;
+        height: 5vh;
+        text-align: center;
+        
+    
+    }
    
 }
