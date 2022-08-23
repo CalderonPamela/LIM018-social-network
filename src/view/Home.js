@@ -3,16 +3,21 @@ import { signInPopup, GoogleAuthProvider } from "../lib/index.js"
 export default ()=> {
     const viewHome = `
     <section class="contenido_container1" id="container1">
-    <div class=button>
+    <div class = "home-page">
+    <div class = "img-izquierda"></div>
+    <div class = "img-derecha">
+    <div class = button1>
     <button class="button-register" id="optionregister">
         Registrarse
     </button>
-    <button class="button-acces" id="optionacces">
+    <button class="button-access" id="optionacces">
         Iniciar Sesión
     </button>
-    <button class="button-google" id="optiongoogle">
-        Iniciar Sesión con Google
+    <button class="button-google" id="optiongoogle" ><img id="imgGoogle" src="imagenes/Google-img.png">
+        Iniciar con Google
     </button>
+    </div>
+    </div>
     </div>
     </section>`
 
