@@ -7,6 +7,10 @@ import {
     GoogleAuthProvider, signInWithPopup, sendEmailVerification
 }
     from "https://www.gstatic.com/firebasejs/9.9.1/firebase-auth.js";
+    
+import { getFirestore, collection, addDoc, getDocs, deleteDoc, onSnapshot, doc, getDoc, updateDoc } 
+    
+    from "https://www.gstatic.com/firebasejs/9.9.1/firebase-firestore.js"        
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
