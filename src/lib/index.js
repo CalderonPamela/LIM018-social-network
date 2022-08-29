@@ -7,6 +7,10 @@ import {
     GoogleAuthProvider, signInWithPopup, sendEmailVerification
 }
     from "https://www.gstatic.com/firebasejs/9.9.1/firebase-auth.js";
+    
+import { getFirestore, collection, addDoc, getDocs, deleteDoc, onSnapshot, doc, getDoc, updateDoc } 
+    
+    from "https://www.gstatic.com/firebasejs/9.9.1/firebase-firestore.js"        
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -47,7 +51,22 @@ export const sendEmail = () =>{
 
 export { GoogleAuthProvider }
 
+export const db = getFirestore();
 
+export const saveTask = (title,description) => {
+    addDoc(collection(db,'tasks'), {title,description});
+}
+
+export const getTasks = () => getDocs(collection(db, 'tasks'));
+
+export const onGetTasks = (callback) => onSnapshot(collection(db, 'tasks'), callback);
+
+export const deleteTask = id => deleteDoc (doc(db, 'tasks', id));
+
+export const getTask = id => getDoc(doc(db, 'tasks', id));
+
+export const updateTask = (id, newFields) => 
+updateDoc(doc(db, 'tasks', id), newFields);
 
 
 
