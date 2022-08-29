@@ -9,6 +9,7 @@ import { components } from '../view/index.js'
 import { registerFunctions } from '../view/Register.js'
 import { homeFunctions } from '../view/Home.js'
 import { accesFunctions } from '../view/Acces.js';
+import { postFunctions, postMaker } from '../view/Post.js';
 
 const changeView = (route) => {
   const id = route.split('/')[1];
@@ -37,7 +38,10 @@ const changeView = (route) => {
       }
     case '#/Post':
       { 
-        return container.appendChild(components.post()) 
+        const view = container.appendChild(components.post());
+       postFunctions();
+        postMaker();
+        return view;
       }
     default:
       return container.appendChild(components.different())
