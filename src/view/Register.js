@@ -48,6 +48,7 @@ export const registerFunctions = () => {
         const errorMessage = document.getElementById('message-error')
         if(user != '' && password != ''){
           createUser(user, password).then((userCredential) => {
+            //const user = userCredential.user
             // Signed in
             sendEmail().then(()=>{
               alert("se envio correo")
