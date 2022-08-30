@@ -10,6 +10,7 @@ export default () => {
 
         <label for="description">Description:</label>
         <textarea id = "task-description" rows="3" placehorlder = "Task Description"></textarea>
+        
         <button id = "btn-task-save">Save</button>
     </form>
 
@@ -20,6 +21,7 @@ export default () => {
     divElement.innerHTML = viewDifferent;
     return divElement;
 }
+
 
 let editStatus = false;
 let id = '';
@@ -46,7 +48,10 @@ export const postMaker = () => {
         const btnsDelete = tasksContainer.querySelectorAll('.btn-delete')
         btnsDelete.forEach((btn) => {
             btn.addEventListener('click', ({ target: { dataset } }) => {
-                deleteTask(dataset.id);
+                var result = confirm('¿Deseas eliminar este mensaje?');
+                if (result == true){
+                    deleteTask(dataset.id);
+                }
             });
         });
 
@@ -78,18 +83,24 @@ export const postFunctions = () => {
         const title = taskForm['task-title']
         const description = taskForm['task-description']
 
-        if (!editStatus) {
-            saveTask(title.value, description.value);
-        } else {
-            updateTask(id, {
-                title: title.value,
-                description: description.value,
-            });
+        if(title.value != '' && description.value != ''){
+            if (!editStatus) {
+                saveTask(title.value, description.value);
+            } else {
+                updateTask(id, {
+                    title: title.value,
+                    description: description.value,
+                });
+    
+                editStatus = false;
+            };
+    
+            taskForm.reset();
 
-            editStatus = false;
-        };
-
-        taskForm.reset();
+        }else{
+            alert("ingresa title o description faltante")
+        }
+        
     });
 };
 
