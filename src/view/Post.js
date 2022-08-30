@@ -46,7 +46,10 @@ export const postMaker = () => {
         const btnsDelete = tasksContainer.querySelectorAll('.btn-delete')
         btnsDelete.forEach((btn) => {
             btn.addEventListener('click', ({ target: { dataset } }) => {
-                deleteTask(dataset.id);
+                var result = confirm('¿Deseas eliminar este mensaje?')
+                if(result==true){
+                    deleteTask(dataset.id);
+                }
             });
         });
 
@@ -77,19 +80,23 @@ export const postFunctions = () => {
         console.log('submited')
         const title = taskForm['task-title']
         const description = taskForm['task-description']
-
-        if (!editStatus) {
-            saveTask(title.value, description.value);
-        } else {
-            updateTask(id, {
-                title: title.value,
-                description: description.value,
-            });
-
-            editStatus = false;
-        };
-
-        taskForm.reset();
+        if(title.value !='' && description.value !=''){
+            if (!editStatus) {
+                saveTask(title.value, description.value);
+            } else {
+                updateTask(id, {
+                    title: title.value,
+                    description: description.value,
+                });
+    
+                editStatus = false;
+            };
+    
+            taskForm.reset();
+        }else{
+            alert('ingresa title o description faltante')
+        }
+        
     });
 };
 
