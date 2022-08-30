@@ -1,9 +1,9 @@
 
-export const signIn = () => Promise.resolve({
+export const signIn = jest.fn( () => Promise.resolve({
     user : {
         emailVerified: true,
     },
-});
+}));
 
 export const createUser = () => Promise.resolve({
 });
