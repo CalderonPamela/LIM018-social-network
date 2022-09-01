@@ -1,5 +1,7 @@
 // importamos la funcion que vamos a testear
 import access, { accesFunctions } from "../src/view/Acces.js";
+import { signIn } from "../src/lib/index.js";
+
 jest.mock('../src/lib//index.js')
 
 describe('testeando access', () => {
@@ -75,8 +77,5 @@ describe('testeando accesFunctions', () => {
       + user.value);
       done()
     }, 100)
-  })
-
+  }) 
 });
-
-
