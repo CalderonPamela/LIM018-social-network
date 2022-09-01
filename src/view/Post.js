@@ -3,17 +3,23 @@ import { saveTask, getTask, onGetTasks, deleteTask, updateTask } from '../lib/in
 
 export default () => {
     const viewDifferent = `
-   
-    <form id = "task-form"> 
-        <label for="title">Title:</label>
-        <input type = "text" placeholder = "Task Title" id = "task-title">
-
-        <label for="description">Description:</label>
-        <textarea id = "task-description" rows="3" placehorlder = "Task Description"></textarea>
-        <button id = "btn-task-save">Save</button>
+    <section class="contenido_container3" id="container3">
+    <div class="post-page">
+    <div class = "post-perfil"></div>
+    <div class = "img-derecha-post">
+    <div class = "post-container">
+    <form class="post-write" id = "task-form"> 
+        <label class="post-write-title"> CREA TU POST </label>
+        <input class="book-title" type = "text" placeholder = "Título de libro" id = "task-title">
+        <textarea class="book-description" id = "task-description" placeholder = "¿Cómo va tu lectura hoy? Comenta, califica ó reseña... "></textarea>
+        
+        <button class="post-write-button" id = "btn-task-save">Publicar</button>
     </form>
-
-    <div id ="tasks-container"></div>
+    <div class="post-list" id ="tasks-container"></div>
+    </div>
+    </div>
+    </div>
+    </section>
     `
     const divElement = document.createElement('div')
     divElement.innerHTML = viewDifferent;
@@ -30,7 +36,7 @@ export const x =  (querySnapshot) => {
     querySnapshot.forEach((doc) => {
         const task = doc.data();
         html += `
-        <div>
+        <div class="post">
             <h3>${task.title}</h3> 
             <p>${task.description}</p>
             <button class ='btn-delete' data-id="${doc.id}">Delete</button>
