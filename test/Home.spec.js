@@ -58,4 +58,6 @@ describe('testeando homeFunctions', () => {
             done()
         }, 100)
     }) 
-})
+
+
+});
