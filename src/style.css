@@ -111,38 +111,45 @@
     color: black; 
 }
 
-.post {
-    align-items: center;
+.post-page{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column; 
+}
+.post-write{
+    width: 100%;
+    height: 30%;
     display: flex;
     flex-direction: column;
-    margin-top: 30%;
+    padding: 5%;
 }
-
-.text-post{
-    width: 80vw;
-    height: 20vh;
-    background-color: white;
-    display: flex;
-    flex-direction: column; 
-    border-radius: 0px 0px 25px 25px; 
-}
-
-.titulo-post{
-    width: 80vw;
-    height: 5vh;
+.post-write-title{
     background-color: black;
     color: white;
-    display: flex;
-    flex-direction: column; 
     text-align: center;
+    padding: 5%;
 }
-
-.button-post{
-    width: 80vw;
-    height: 5vh;
-    text-align: center;
-    
-
+.book-description{
+    padding-bottom: 20%;
+}
+.post-write-button{
+    border-radius: 0px 0px 10px 10px;
+}
+.post-list{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+}
+.post{
+    background-color: white; 
+    margin: 2.5% 5% 2.5% 5%;
+    border-style:solid;
+    border-width:thin;
+    border-radius: 10px;
+    padding: 5%;
+    word-break:break-all;
 }
 
 /*Responsive for desktop*/
@@ -157,7 +164,7 @@
        background: rgb(177, 169, 178); 
     }
 
-    .contenido_container1, .contenido_container2, .contenido_container3{
+    .contenido_container1, .contenido_container2{
         position: relative;
         width: 70vw;
         height: 80vh;
@@ -165,7 +172,7 @@
         border-radius: 25px;
     }
 
-    .home-page, .register-page, .access-page {
+    .home-page, .register-page, .access-page{
         position: absolute;
         top: 0px;
         left: 0px;
@@ -290,33 +297,24 @@
         color: black
     }
 
+    .contenido_container3 {
+        background-image: url('../imagenes/home3.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;   
+    }
+
+    .post-page{
+        width: 70%;
+        height: 100%;
+        display: flex;
+        flex-direction: column; 
+    }
+
    
-    
-    .text-post{
-        width: 60vw;
-        height: 20vh;
-        background-color: white;
-        display: flex;
-        flex-direction: column; 
-        border-radius: 0px 0px 25px 25px; 
-    }
-    
-    .titulo-post{
-        width: 60vw;
-        height: 5vh;
-        background-color: black;
-        color: white;
-        display: flex;
-        flex-direction: column; 
-        text-align: center;
-    }
-    
-    .button-post{
-        width: 60vw;
-        height: 5vh;
-        text-align: center;
-        
-    
-    }
    
 }
