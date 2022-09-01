@@ -25,7 +25,7 @@ Resuelve los problemas permitiendo comentar, calificar o reseñar sobre libros q
 ## Prototipo de alta fidelidad
 
   <img src="src/imagenes/Captura.PNG" >
-  <img src="src/imagenes/Captura2.png" >
+  <img src="src/imagenes/Captura2.PNG" >
 
 
 ### 2.2 Historias y Criterios de Aceptación
