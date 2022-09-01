@@ -19,13 +19,13 @@ Resuelve los problemas permitiendo comentar, calificar o reseñar sobre libros q
 
 ## Prototipo de baja fidelidad
 
-  <img src="imagenes/Captura3.PNG" alt="">
+  <img src="src/imagenes/Captura3.PNG" >
 
 
 ## Prototipo de alta fidelidad
 
-  <img src="imagenes/Captura.PNG" alt="">
-  <img src="imagenes/Captura2.PNG" alt="">
+  <img src="src/imagenes/Captura.PNG" >
+  <img src="src/imagenes/Captura2.png" >
 
 
 ### 2.2 Historias y Criterios de Aceptación
