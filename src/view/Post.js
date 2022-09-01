@@ -5,6 +5,9 @@ export default () => {
     const viewDifferent = `
     <section class="contenido_container3" id="container3">
     <div class="post-page">
+    <div class = "post-perfil"></div>
+    <div class = "img-derecha-post">
+    <div class = "post-container">
     <form class="post-write" id = "task-form"> 
         <label class="post-write-title"> CREA TU POST </label>
         <input class="book-title" type = "text" placeholder = "Título de libro" id = "task-title">
@@ -13,6 +16,8 @@ export default () => {
         <button class="post-write-button" id = "btn-task-save">Publicar</button>
     </form>
     <div class="post-list" id ="tasks-container"></div>
+    </div>
+    </div>
     </div>
     </section>
     `
@@ -31,7 +36,7 @@ export const x =  (querySnapshot) => {
     querySnapshot.forEach((doc) => {
         const task = doc.data();
         html += `
-        <div>
+        <div class="post">
             <h3>${task.title}</h3> 
             <p>${task.description}</p>
             <button class ='btn-delete' data-id="${doc.id}">Delete</button>
