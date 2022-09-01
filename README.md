@@ -1,7 +1,158 @@
-# Creando una Red Social
+# Laberinto Lector : Red Social para lectores.
+
+### 1. Resumen del proyecto
+
+Este proyecto tiene como finalidad construir una Single Page Aplication, dirigido a personas aficionadas a la lectura. Permite a cualquier usuario crear una cuenta de acceso y loguearse con ella; crear, editar y borrar  publicaciones. Permite tener un muro general en la que se puede seguir las últimas actualizaciones de los usuarios.
+
+### 2. Descripción del proyecto
+
+¿Cuál es la necesidad o el problema que Laberinto Lector busca solucionar?
+Laberinto Lector está pensada en crear un espacio donde los amantes de la lectura comente y recomienden libros. 
+
+¿Para quién está diseñado Laberinto Lector?
+Está diseñado para aquellas personas que buscan una aplicación que les permita conectar con aquellas personas que son amantes de la lectura o quieren sugerencias para leer un libro.
+
+¿Cómo Laberinto Lector está resolviendo los problemas de los usuarios?
+Resuelve los problemas permitiendo comentar, calificar o reseñar sobre libros que otras personas han leido.
+
+### 2.1 Proceso creativo de diseño
+
+## Prototipo de baja fidelidad
+
+  <img src="imagenes/Captura3.PNG" alt="">
 
 
+## Prototipo de alta fidelidad
 
+  <img src="imagenes/Captura.PNG" alt="">
+  <img src="imagenes/Captura2.PNG" alt="">
+
+
+### 2.2 Historias y Criterios de Aceptación
+
+## Historia 1
+
+COMO usuario
+QUIERO visualizar la pagina principal que me permita registrarme en la aplicación
+PARA poder compartir con la comunidad aficionada a la lectura.
+
+CRITERIOS DE ACEPTACIÓN
+ Debe tener un botón para que el usuario se registre.
+ Debe tener un botón para que el usuario ya registrado ingrese a la red social.
+
+CRITERIOS DE TERMINADO
+
+ Debe ser una SPA.
+ Debe ser responsive.
+ Debe haber recibido code review de al menos una compañera de otro equipo.
+
+## Historia 2
+COMO usuario
+QUIERO tener la opción de ingresar a la red social por google,
+PARA que el ingreso sea más rápido y así ahorrar tiempo.
+
+CRITERIOS DE ACEPTACIÓN
+ El usuario encuentra otras opciones de registro que le facilitan el proceso.
+
+CRITERIOS DE TERMINADO
+ Debe ser una SPA.
+ Debe ser responsive.
+ Debe haber recibido code review de al menos una compañera de otro equipo.
+
+## Historia 3
+
+COMO usuario
+QUIERO registrarme escribiendo mi correo , nombre de usuario y contraseña.
+PARA tener una cuenta en la red social.
+
+CRITERIO DE ACEPTACIÓN
+
+ Debe haber una área donde se le solicite nombre, contraseña y correo al usuario
+CRITERIO DE TERMINADO
+
+ Debe ser una SPA.
+ Debe ser responsive.
+ Debe haber recibido code review de al menos una compañera de otro equipo.
+ Pasar los test unitarios.
+ Testear manualmente buscando errores e imperfecciones simples.
+ Hacer pruebas de usabilidad e incorporaron el feedback de los usuarios como mejoras.
+
+## Historia 4
+
+COMO usuario
+QUIERO ingresar con mi cuenta
+PARA tener acceso a la red social.
+
+CRITERIO DE ACEPTACIÓN
+
+ El usuario debe validar su usuario y contraseña para ingresar a la red social.
+ El usuario tiene la opción de ingresar con cuenta de google.
+CRITERIO DE TERMINADO
+
+ Debe ser una SPA.
+ Debe ser responsive.
+ Debe haber recibido code review de al menos una compañera de otro equipo.
+ Pasar los test unitarios.
+ Testear manualmente buscando errores e imperfecciones simples.
+ Hacer pruebas de usabilidad e incorporaron el feedback de los usuarios como mejoras.
+
+## Historia 5
+
+COMO usuario
+QUIERO que se me envié un mensaje a mi correo electrónico
+PARA hacer efectivo el registro correcto a la red social
+
+CRITERIO DE ACEPTACIÓN
+
+ No se permite usuarios repetidos
+ Se permite usuarios con cuentas validas
+CRITERIO DE TERMINADO
+
+ Debe ser una SPA.
+ Debe haber recibido code review de al menos una compañera de otro equipo.
+ Pasar los test unitarios.
+ Testear manualmente buscando errores e imperfecciones simples.
+ Hacer pruebas de usabilidad e incorporaron el feedback de los usuarios como mejoras.
+
+## Historia 6
+
+COMO usuario
+QUIERO que la plataforma de registro me indique si hay algún error en el llenado de datos
+PARA que pueda corregirlo
+
+CRITERIO DE ACEPTACIÓN
+
+ Se debe mostrar mensajes que indique si los campos faltan llenar o están llenados de forma incorrecta.
+CRITERIO DE TERMINADO
+
+ Debe ser una SPA.
+ Debe ser responsive.
+ Debe haber recibido code review de al menos una compañera de otro equipo.
+ Pasar los test unitarios.
+ Testear manualmente buscando errores e imperfecciones simples
+ Hacer pruebas de usabilidad e incorporaron el feedback de los usuarios como mejoras.
+
+## Historia 7
+
+ COMO usuario
+QUIERO crear contenido en la aplicación y luego poder editarlos y borrarlos
+PARA poder compartir con la comunidad de la red social.
+
+CRITERIO DE ACEPTACIÓN
+
+ Se puede crear post de contenidos
+ Validar que los post tengan contenido.
+ Permite publicar los post
+ El contenido se puede editar y eliminar
+ Antes de eliminar un publicación debe aparecer un mensaje de confirmación para eliminar el post.
+CRITERIO DE TERMINADO
+
+ Debe ser una SPA.
+ Debe ser responsive.
+ Debe haber recibido code review de al menos una compañera de otro equipo.
+ Pasar los test unitarios.
+ Testear manualmente buscando errores e imperfecciones simples.
+ Hacer pruebas de usabilidad e incorporaron el feedback de los usuarios como mejoras
 
 
 ## Índice
