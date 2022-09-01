@@ -63,21 +63,20 @@ describe('testeando accesFunctions', () => {
     user.value = "belen123456@gmail.com"
     const pass = document.getElementById('password');
     pass.value = "123456"
-    signIn.mockImplementation(() => Promise.resolve({
-      user: {
-        email: user.value,
-        emailVerified: false,
-      },
-    }))
+    signIn.mockImplementation(() => Promise.resolve({user : {
+      email: user.value,
+      emailVerified: false,
+  }, }))
     window.alert = jest.fn()
     accessButton.click()
     setTimeout(() => {
       console.log(window.location.hash)
-      expect(window.alert).toHaveBeenCalledWith("El correo eléctronico no ha sido verificado. Revisar bandeja de entrada de "
-        + user.value);
+      expect(window.alert).toHaveBeenCalledWith("El correo eléctronico no ha sido verificado. Revisar bandeja de entrada de " 
+      + user.value);
       done()
     }, 100)
-  });
+  })
+
 });
 
 
