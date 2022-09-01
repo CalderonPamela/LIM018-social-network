@@ -111,50 +111,58 @@
     color: black; 
 }
 
-.post {
-    align-items: center;
+.post-page{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; 
+}
+.post-write{
+    width: 100%;
+    height: 30vh;
     display: flex;
     flex-direction: column;
-    margin-top: 30%;
+    padding: 5%;
 }
-
-.text-post{
-    width: 80vw;
-    height: 20vh;
-    background-color: white;
-    display: flex;
-    flex-direction: column; 
-    border-radius: 0px 0px 25px 25px; 
-}
-
-.titulo-post{
-    width: 80vw;
-    height: 5vh;
+.post-write-title{
     background-color: black;
     color: white;
+    text-align: center;
+    padding: 5%;
+}
+.book-description{
+    padding-bottom: 20%;
+}
+.post-write-button{
+    border-radius: 0px 0px 10px 10px;
+}
+.post-list{
+    width: 100%;
+    height: 60vh;
     display: flex;
-    flex-direction: column; 
-    text-align: center;
-}
-
-.button-post{
-    width: 80vw;
-    height: 5vh;
-    text-align: center;
-    
-
-}
+    flex-direction: column;
+    overflow: scroll;
+} 
+.post{
+    background-color: white; 
+    margin: 2.5% 5% 2.5% 5%;
+    border-style:solid;
+    border-width:thin;
+    border-radius: 10px;
+    padding: 5%;
+    word-break:break-word;
+} 
 
 /*Responsive for desktop*/
 
 @media screen and (min-width:768px) {
 
     body{
-       display: flex;
-       align-items: center;
-       justify-content: center;
-       min-height: 100vh;
-       background: rgb(177, 169, 178); 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: rgb(177, 169, 178); 
     }
 
     .contenido_container1, .contenido_container2, .contenido_container3{
@@ -165,13 +173,14 @@
         border-radius: 25px;
     }
 
-    .home-page, .register-page, .access-page {
+    .home-page, .register-page, .access-page, .post-page{
         position: absolute;
         top: 0px;
         left: 0px;
         width: 100%;
-        height: 100%;
+        height: 80vh;
         display: flex;
+        flex-direction:row;
         align-items: center;
         justify-content: space-around;
     }
@@ -195,27 +204,22 @@
         align-items: center;
         justify-content: center;
     }
-
-    .img-derecha{
-        background-image:url('../imagenes/home2.png'); 
+    .post-perfil{
+        background-image:url('../imagenes/home3.png'); 
         background-repeat: no-repeat;
-        background-size: 100% 100%;
+        background-size:100% 100%; 
         width: 100%;
-        height: 100%;
-        border-radius: 0px 25px 25px 0px;   
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
+        height: 80vh;
+        border-radius: 25px 0px 0px 25px;  
+   }
     .img-derecha-post{
         background-image:url('../imagenes/home3.png'); 
         background-repeat: no-repeat;
         background-size: 100% 100%;
         width: 100%;
         height: 100%;
-        border-radius: 25px;   
-        display: flex;
+        border-radius: 0px 25px 25px 0px; 
+        display: flex; 
         align-items: center;
         justify-content: center;
     }
@@ -228,6 +232,17 @@
         width: 40%;
         min-width: 238px;
         padding: 0 10px;
+    }
+
+    .post-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 40%;
+        min-width: 238px;
+        padding: 0 10px; 
+        height: 100%;
     }
 
     .button-register,
@@ -291,32 +306,6 @@
     }
 
    
-    
-    .text-post{
-        width: 60vw;
-        height: 20vh;
-        background-color: white;
-        display: flex;
-        flex-direction: column; 
-        border-radius: 0px 0px 25px 25px; 
-    }
-    
-    .titulo-post{
-        width: 60vw;
-        height: 5vh;
-        background-color: black;
-        color: white;
-        display: flex;
-        flex-direction: column; 
-        text-align: center;
-    }
-    
-    .button-post{
-        width: 60vw;
-        height: 5vh;
-        text-align: center;
-        
-    
-    }
+   
    
 }

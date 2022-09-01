@@ -1,5 +1,5 @@
 
-export const signIn = jest.fn( ()=> Promise.resolve({
+export const signIn = jest.fn( () => Promise.resolve({
     user : {
         emailVerified: true,
     },
