@@ -66,10 +66,9 @@ QUIERO registrarme escribiendo mi correo , nombre de usuario y contraseña.
 PARA tener una cuenta en la red social.
 
 CRITERIO DE ACEPTACIÓN
-
  Debe haber una área donde se le solicite nombre, contraseña y correo al usuario
-CRITERIO DE TERMINADO
 
+CRITERIO DE TERMINADO
  Debe ser una SPA.
  Debe ser responsive.
  Debe haber recibido code review de al menos una compañera de otro equipo.
@@ -84,11 +83,10 @@ QUIERO ingresar con mi cuenta
 PARA tener acceso a la red social.
 
 CRITERIO DE ACEPTACIÓN
-
  El usuario debe validar su usuario y contraseña para ingresar a la red social.
  El usuario tiene la opción de ingresar con cuenta de google.
-CRITERIO DE TERMINADO
 
+CRITERIO DE TERMINADO
  Debe ser una SPA.
  Debe ser responsive.
  Debe haber recibido code review de al menos una compañera de otro equipo.
@@ -103,11 +101,10 @@ QUIERO que se me envié un mensaje a mi correo electrónico
 PARA hacer efectivo el registro correcto a la red social
 
 CRITERIO DE ACEPTACIÓN
-
  No se permite usuarios repetidos
  Se permite usuarios con cuentas validas
-CRITERIO DE TERMINADO
 
+CRITERIO DE TERMINADO
  Debe ser una SPA.
  Debe haber recibido code review de al menos una compañera de otro equipo.
  Pasar los test unitarios.
@@ -121,10 +118,9 @@ QUIERO que la plataforma de registro me indique si hay algún error en el llenad
 PARA que pueda corregirlo
 
 CRITERIO DE ACEPTACIÓN
-
  Se debe mostrar mensajes que indique si los campos faltan llenar o están llenados de forma incorrecta.
-CRITERIO DE TERMINADO
 
+CRITERIO DE TERMINADO
  Debe ser una SPA.
  Debe ser responsive.
  Debe haber recibido code review de al menos una compañera de otro equipo.
@@ -134,19 +130,18 @@ CRITERIO DE TERMINADO
 
 ## Historia 7
 
- COMO usuario
+COMO usuario
 QUIERO crear contenido en la aplicación y luego poder editarlos y borrarlos
 PARA poder compartir con la comunidad de la red social.
 
 CRITERIO DE ACEPTACIÓN
-
  Se puede crear post de contenidos
  Validar que los post tengan contenido.
  Permite publicar los post
  El contenido se puede editar y eliminar
  Antes de eliminar un publicación debe aparecer un mensaje de confirmación para eliminar el post.
-CRITERIO DE TERMINADO
 
+CRITERIO DE TERMINADO
  Debe ser una SPA.
  Debe ser responsive.
  Debe haber recibido code review de al menos una compañera de otro equipo.
