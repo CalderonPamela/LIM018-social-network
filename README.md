@@ -30,7 +30,7 @@ Resuelve los problemas permitiendo comentar, calificar o reseñar sobre libros q
 
 ### 2.2 Historias y Criterios de Aceptación
 
-## Historia 1
+:pushpin: Historia 1
 
 COMO usuario
 QUIERO visualizar la pagina principal que me permita registrarme en la aplicación
@@ -47,7 +47,7 @@ CRITERIOS DE TERMINADO
  Debe ser responsive.
  Debe haber recibido code review de al menos una compañera de otro equipo.
 
-## Historia 2
+:pushpin: Historia 2
 COMO usuario
 QUIERO tener la opción de ingresar a la red social por google,
 PARA que el ingreso sea más rápido y así ahorrar tiempo.
@@ -62,7 +62,7 @@ CRITERIOS DE TERMINADO
  Debe ser responsive.
  Debe haber recibido code review de al menos una compañera de otro equipo.
 
-## Historia 3
+:pushpin: Historia 3
 
 COMO usuario
 QUIERO registrarme escribiendo mi correo , nombre de usuario y contraseña.
@@ -81,7 +81,7 @@ CRITERIO DE TERMINADO
  Testear manualmente buscando errores e imperfecciones simples.
  Hacer pruebas de usabilidad e incorporaron el feedback de los usuarios como mejoras.
 
-## Historia 4
+:pushpin: Historia 4
 
 COMO usuario
 QUIERO ingresar con mi cuenta
@@ -101,7 +101,7 @@ CRITERIO DE TERMINADO
  Testear manualmente buscando errores e imperfecciones simples.
  Hacer pruebas de usabilidad e incorporaron el feedback de los usuarios como mejoras.
 
-## Historia 5
+:pushpin: Historia 5
 
 COMO usuario
 QUIERO que se me envié un mensaje a mi correo electrónico
@@ -120,7 +120,7 @@ CRITERIO DE TERMINADO
  Testear manualmente buscando errores e imperfecciones simples.
  Hacer pruebas de usabilidad e incorporaron el feedback de los usuarios como mejoras.
 
-## Historia 6
+:pushpin: Historia 6
 
 COMO usuario
 QUIERO que la plataforma de registro me indique si hay algún error en el llenado de datos
@@ -138,8 +138,8 @@ CRITERIO DE TERMINADO
  Pasar los test unitarios.
  Testear manualmente buscando errores e imperfecciones simples
  Hacer pruebas de usabilidad e incorporaron el feedback de los usuarios como mejoras.
-
-## Historia 7
+ 
+:pushpin: Historia 7
 
 COMO usuario
 QUIERO crear contenido en la aplicación y luego poder editarlos y borrarlos
